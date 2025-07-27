@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kayıt Formu</title>
+  </head>
+  <body>
+    <h1 id="title">Kayıt Formu</h1>
+    <p id="description">Lütfen formu eksiksiz doldurunuz./p></p>
+    <form id="survey-form" action="submit.php" method="post">
+      <label id="name-label" for="name">İsim:</label><br />
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Adınızı girin"
+        required
+      /><br />
+      <br />
+      <label id="email-label" for="email">E-posta:</label><br />
+      <br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="ornek@example.com"
+        required
+      /><br />
+      <br />
+      <label id="number-label" for="number">Yaşınız:</label><br />
+      <input
+        type="number"
+        id="number"
+        name="age"
+        min="10"
+        max="100"
+        placeholder="Yaşınızı girin"
+        required
+      /><br />
+      <br />
+
+      <label for="gender">Cinsiyet:</label><br />
+      <select id="gender" name="gender" required>
+        <option value="">--Cinsiyet Seçiniz--</option>
+        <option value="male">Erkek</option>
+        <option value="female">Kadın</option>
+        <option value="other">Diğer</option></select
+      ><br /><br />
+
+      <p>Bize nereden ulaştınız?:</p>
+      <input
+        type="radio"
+        id="standart"
+        name="uyelik"
+        value="standart"
+        required
+      />
+      <label for="instagram">İnstagram</label><br />
+
+      <input type="radio" id="tiktok" name="uyelik" value="tiktok" />
+      <label for="tiktok">Tiktok</label><br /><br />
+
+      <!-- 10. Onay Kutuları -->
+      <p>Hangi hizmetleri almak istersiniz?</p>
+      <input type="checkbox" id="haber" name="hizmet" value="haber" />
+      <label for="haber">Haber Bülteni</label><br />
+
+      <input type="checkbox" id="etkinlik" name="hizmet" value="etkinlik" />
+      <label for="etkinlik">Etkinlik Bildirimleri</label><br /><br />
+
+      <!-- 11. Metin Alanı -->
+      <label for="comments">Ek Yorumlar:</label><br />
+      <textarea
+        id="comments"
+        name="comments"
+        rows="4"
+        cols="50"
+        placeholder="Yorumunuzu buraya yazın..."
+      ></textarea
+      ><br /><br />
+
+      <!-- 12. Gönder Butonu -->
+      <input type="submit" id="submit" value="Gönder" />
+    </form>
+  </body>
+</html>
